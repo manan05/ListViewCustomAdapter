@@ -4,15 +4,16 @@ import java.util.ArrayList;
 
 // These are called as POJO
 //POJO = Plain Old Java Objects
+
 public class Teacher {
 String name;
 String course;
-
+    //Constructor using Alt+Insert
     public Teacher(String name, String course) {
         this.name = name;
         this.course = course;
     }
-
+    //Getter using Alt+Insert
     public String getName() {
         return name;
     }
@@ -22,6 +23,7 @@ String course;
     }
 
     public static ArrayList<Teacher> get8RandomTeachers(){
+        //We now creater a new ArrayList and add the data
         ArrayList<Teacher> teachers = new ArrayList<>();
         teachers.add(new Teacher("Jager","ADS"));
         teachers.add(new Teacher("Rook","Armour"));
@@ -32,7 +34,7 @@ String course;
         teachers.add(new Teacher("Blitz","Flash Shield"));
         teachers.add(new Teacher("Doc","Stim Pistol"));
 
-        return teachers;
+        return teachers; // Here we return the ArrayList !
 
     }
 }

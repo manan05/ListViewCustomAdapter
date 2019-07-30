@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         lvTeachers = findViewById(R.id.lvTeachers);
-        TeacherAdapter teacherAdapter = new TeacherAdapter();
+        TeacherAdapter teacherAdapter = new TeacherAdapter(); // Created a new custom adapter
         lvTeachers.setAdapter(teacherAdapter);
     }
 
@@ -29,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return teachers.size();
+            return teachers.size(); // Total size of the data
         }
 
         @Override
         public Teacher getItem(int position) {
-            return teachers.get(position);
+            return teachers.get(position); // Will go to that position and get the data
         }
 
         @Override
