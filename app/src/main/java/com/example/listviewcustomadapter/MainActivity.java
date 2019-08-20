@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<Teacher> teachers = Teacher.get8RandomTeachers();
-    ListView lvTeachers ;
+    ListView lvTeachers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         lvTeachers.setAdapter(teacherAdapter);
     }
 
-    class TeacherAdapter extends BaseAdapter{
+    class TeacherAdapter extends BaseAdapter {
 
         @Override
         public int getCount() {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             View itemView = getLayoutInflater().inflate(
                     R.layout.list_item_teacher,
-                    parent,false
+                    parent, false
             );
             TextView tvName = itemView.findViewById(R.id.tvName);
             TextView tvCourse = itemView.findViewById(R.id.tvCourse);
