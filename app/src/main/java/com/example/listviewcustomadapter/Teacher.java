@@ -2,7 +2,7 @@ package com.example.listviewcustomadapter;
 
 import java.util.ArrayList;
 
-// These are called as POJO
+//These are called as POJO
 //POJO = Plain Old Java Objects
 
 public class Teacher {
