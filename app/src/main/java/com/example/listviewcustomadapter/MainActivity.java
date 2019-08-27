@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         TeacherAdapter teacherAdapter = new TeacherAdapter(); // Created a new custom adapter
         lvTeachers.setAdapter(teacherAdapter);
     }
-
+    // BaseAdapter is abstract in nature
+    // We can extend it easily
     class TeacherAdapter extends BaseAdapter {
 
         @Override
@@ -43,11 +44,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
+        //very important
+        //each row of the layout gets created
         public View getView(int position, View convertView, ViewGroup parent) {
             View itemView = getLayoutInflater().inflate(
                     R.layout.list_item_teacher,
                     parent, false
             );
+            //Here we are writing itemView.fvbi
+            // as the activity as is does not contain tvName, tvCourse
+            //itemView which inflates the layout of list_item_teacher contains
+            //tvName and tvCourses
             TextView tvName = itemView.findViewById(R.id.tvName);
             TextView tvCourse = itemView.findViewById(R.id.tvCourse);
             tvName.setText(getItem(position).getName());

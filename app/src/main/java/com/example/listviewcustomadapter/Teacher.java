@@ -15,7 +15,7 @@ public class Teacher {
         this.course = course;
     }
 
-    //Getter using Alt+Insert
+    //Getter functions using Alt+Insert
     public String getName() {
         return name;
     }
@@ -23,6 +23,7 @@ public class Teacher {
     public String getCourse() {
         return course;
     }
+
 
     public static ArrayList<Teacher> get8RandomTeachers() {
         //We now creater a new ArrayList and add the data
